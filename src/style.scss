@@ -73,3 +73,43 @@ button {
   max-width: 90vw;
   width: 35rem;
 }
+
+@media (max-width: 640px) {
+
+  html {
+    font-size: .875rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  form {
+    margin-top: 1rem;
+    padding: 0 1rem;
+    text-align: left;
+  }
+
+  label {
+    display: inline-block;
+    margin: .5rem 0;
+    width: 70%;
+
+    input {
+      width: 65%;
+    }
+
+    span {
+      display: inline-block;
+      padding-right: .5rem;
+      text-align: right;
+      width: 30%;
+    }
+  }
+
+  input,
+  button {
+    margin: 0;
+  }
+}
