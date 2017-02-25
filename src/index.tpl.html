@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <title>Color Palette Generator</title>
+</head>
+<body>
+  <h1>Color Palette Generator</h1>
+
+  <form class="option-form" onsubmit="generate(event)">
+    <label>Start: <input type="text" id="color" value="#d6608e" placeholder="e.g. #d6608e"></label>
+    <label>Count: <input type="number" id="count" value="8" placeholder="e.g. 8"></label>
+    <button type="submit">Go!</button>
+  </form>
+
+  <section id="ring-chart"></section>
+
+  <input type="text" id="result" class="result" readonly>
+</body>
+</html>
