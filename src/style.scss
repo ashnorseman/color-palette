@@ -68,10 +68,35 @@ button {
 }
 
 .result {
-  display: block;
   margin: 2rem auto 0;
   max-width: 90vw;
   width: 35rem;
+
+  input {
+    width: 90%;
+  }
+
+  button {
+    background: #f0f0f0;
+    border-left: 1px solid #343434;
+    color: #343434;
+    line-height: 2rem;
+    margin-left: 2%;
+    margin-right: 0;
+    padding: 0;
+    width: 8%;
+  }
+}
+
+footer {
+  font-size: .875rem;
+  margin-top: 2rem;
+  opacity: .7;
+  text-align: center;
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 @media (max-width: 640px) {

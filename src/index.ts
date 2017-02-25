@@ -4,6 +4,7 @@
 
 import './style.scss';
 
+import * as Clipboard from 'clipboard';
 import * as echarts from './lib/echarts';
 
 import { genColorRing } from './utils/gen-color-ring';
@@ -37,8 +38,18 @@ const dataOption = {
 };
 
 window['generate'] = function (event?: Event) {
-  const color: string = (<HTMLInputElement>document.getElementById('color')).value;
-  const count: number = +(<HTMLInputElement>document.getElementById('count')).value;
+  const colorInput: HTMLInputElement = <HTMLInputElement>document.getElementById('color');
+  const color: string = colorInput.value;
+  const countInput: HTMLInputElement = <HTMLInputElement>document.getElementById('count');
+  let count: number = +countInput.value;
+
+  const MAX_COUNT = 50;
+
+  if (isNaN(count) || count <= 0 || count > MAX_COUNT) {
+    count = MAX_COUNT;
+    countInput.value = '' + MAX_COUNT;
+  }
+
   const colorRing: string[] = genColorRing(color, count);
 
   const data = [];
@@ -70,3 +81,5 @@ window['generate'] = function (event?: Event) {
 };
 
 window['generate']();
+
+new Clipboard('#copy');
